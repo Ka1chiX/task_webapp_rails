@@ -5,7 +5,7 @@
 <div id = "tasks">
     <%@tasks.each do |task|%>
         <div>
-            <%= task.title %>
+            <%= link_to task.title, task_path(task.id) %>
         </div>
     <% end %>
 </div>

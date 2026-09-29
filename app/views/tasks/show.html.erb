@@ -1,0 +1,6 @@
+<%# /app/views/tasks/show.html.erb%>
+
+<h1><%= @task.title %></h1>
+<p> 状態： <%= @task.completed ? "完了" : "未完了"%>
+
+<%= link_to "Back", tasks_path%>
