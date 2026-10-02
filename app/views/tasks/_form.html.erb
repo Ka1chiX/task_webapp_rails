@@ -1,0 +1,17 @@
+<%# app/views/tasks/_form.html.erb %>
+<%= form_with model: task do |form| %>
+    <% if form.object.errors.any? %>
+        <p class = "error">
+            <%= form.object.errors.full_messages.first %>
+        </p>
+    <% end %>
+
+    <div>
+        <%= form.label :title, "タイトル" %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

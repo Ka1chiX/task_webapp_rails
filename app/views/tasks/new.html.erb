@@ -1,15 +1,6 @@
 <%# app/views/tasks/new.html.erb %>
 <h1>新規タスク</h1>
 
-<%= form_with model: @task do |form| %>
-    <div>
-        <%= form.label :title, "タイトル" %>
-        <%= form.text_field :title %>
-    </div>
-
-    <div>
-        <%= form.submit "作成" %>
-    </div>
-<% end %>
+<%= render "form", task: @task %>
 
 <%= link_to "キャンセル", tasks_path %>
