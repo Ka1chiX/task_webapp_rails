@@ -52,6 +52,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Ruby language server and editor integration
+  gem "ruby-lsp", require: false
 end
 
 group :development do
