@@ -26,7 +26,8 @@
   <body>
     <nav>
       <%= link_to "Home", root_path %>
-      <%= button_to "ログアウト", session_path,method: :delete if authenticated? %>
+      <%= link_to "ログイン", new_session_path unless authenticated? %>
+      <%= button_to "ログアウト", session_path, method: :delete if authenticated? %>
     </nav>
 
     <main>
