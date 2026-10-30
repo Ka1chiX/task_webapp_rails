@@ -1,9 +1,12 @@
 <%# /app/views/tasks/show.html.erb%>
 
-<h1><%= @task.title %></h1>
-<p> 状態： <%= @task.completed ? "完了" : "未完了"%>
+<% cache @task do %>
+    <h1><%= @task.title %></h1>
+    <p> 状態： <%= @task.completed ? "完了" : "未完了"%>
+<% end %>
 
 <%= link_to "戻る", tasks_path%>
+
 <% if authenticated? %>
     <%= link_to "編集", edit_task_path(@task) %>
     <%= button_to "削除", @task, method: :delete, data: {turbo_confirm: "本当に削除しますか？"} %>
