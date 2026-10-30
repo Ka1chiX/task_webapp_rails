@@ -12,6 +12,11 @@
     </div>
 
     <div>
+        <%= form.label :description, "説明", style: "display: block" %>
+        <%= form.rich_textarea :description %>
+    </div>
+
+    <div>
         <%= form.submit %>
     </div>
 <% end %>
