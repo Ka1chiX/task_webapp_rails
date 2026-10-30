@@ -3,6 +3,9 @@
 <% cache @task do %>
     <h1><%= @task.title %></h1>
     <p> 状態： <%= @task.completed ? "完了" : "未完了"%>
+    <div>
+        <%= @task.description %>
+    </div>
 <% end %>
 
 <%= link_to "戻る", tasks_path%>
